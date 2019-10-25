@@ -1,0 +1,49 @@
+.hero {
+    /* Sizing */
+    width: 100vw;
+    height: 100vh;
+    
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Text styles */
+    text-align: center;
+    
+    /* Background styles */
+    background-image: url(https://codetheweb.blog/assets/img/posts/full-image-hero/image.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    /* space after image */
+    margin-bottom: 20px;
+}
+
+.heroInner {
+    background: none;
+}
+.heroTitle {
+    font-family: Verdana;
+    letter-spacing: 20px;
+    font-size: 38px;
+    color: white;
+    padding: 20px;
+    text-shadow: 2px 2px 3px #0B1C48;
+    background: none;
+
+}
+
+.heroTag {
+    font-family: sans-serif;
+    letter-spacing: 5px;
+    font-size: 22px;
+    color: white;
+    padding: 20px;
+    text-shadow: 1px 2px 1px #0B1C48;
+    margin-bottom: 50px;
+    background: none;
+
+}

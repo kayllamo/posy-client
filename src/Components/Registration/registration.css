@@ -1,0 +1,64 @@
+.RegistrationForm {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    padding: 0 20px;
+    margin: 70px 30px;
+    border: 2px solid gray;
+    color: white;
+    font-display: bold;
+    background-color: #0B1C48;
+    border-radius: 25px;
+
+}
+
+.full_name, .user_email, .password {
+    color: white;
+    margin: 50px;
+    font-weight: bold;
+    background-color: #0B1C48;
+}
+
+h3 {
+    margin: 50px 10px 10px 10px;
+    font-size: 22px;
+    letter-spacing: 5px;
+    text-shadow: 1px 1px 3px gray;
+
+}
+
+.button {
+    color: white;
+    background-color: peru;
+    font-size: 22px;
+    border: 2px solid gray;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 25px;
+
+} 
+
+.button:hover {
+    background-color: teal;
+}
+
+input[type=text], input[type=password] {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+  }
+
+input[type=text]:focus, input[type=password]:focus {
+    border: 3px solid black;
+}
+
+label, input, span {
+    display: inline-block;
+    background-color: #0B1C48;
+    color: black;
+    color: white;
+}
+
+label {
+    margin-bottom: 5px;
+}
