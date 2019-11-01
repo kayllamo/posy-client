@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
+import { Route, Switch } from 'react-router-dom'
 import Hero from './Components/Hero/hero';
-import RegistrationForm from './Components/Registration/registration';
-import './App.css';
+import RegistrationPage from './Routes/RegistrationRoute';
 import About from './Components/About/about';
-import NavBar from './Components/Nav/nav'
+import NavBar from './Components/Nav/nav';
+import LoginPage from './Routes/LoginRoute';
+import './App.css';
+import AddLogForm from './Components/AddLog/addLog';
 
 // burnt sienna: peru
 // dark blue: #0B1C48
@@ -13,16 +16,38 @@ import NavBar from './Components/Nav/nav'
 // gray: 
 
 class App extends Component {
+  state = { hasError: false }
   
-  render () {
+  render() {
   return (
-    <main className='App'>
+    <div className='App'>
+      <main className='App__main'>
       <NavBar />
-      <Hero />
-      <RegistrationForm />
-      <About />
-    </main>
-  );
+      <AddLogForm />
+
+        <Switch>
+          <Route 
+              exact 
+              path={'/'}
+              component={Hero}
+            />
+          <Route 
+              path='/register'
+              component={RegistrationPage}
+            />
+          <Route
+              path='/about'
+              component={About}
+            />
+          <Route
+            path='/login'
+            component={LoginPage}
+          />
+        </Switch>
+         
+      </main>
+      </div>
+  )
   }
   }
 

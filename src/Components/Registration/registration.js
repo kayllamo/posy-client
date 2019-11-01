@@ -1,13 +1,32 @@
 import React, {Component} from 'react';
 import { Button, Input, Required } from '../../Utils';
-import './registration.css';
-
+import { Link } from 'react-router-dom';
 
 
 class RegistrationForm extends Component {
-// come back to
+  static defaultProps = {
+    onRegistrationSuccess: () => {}
+  }
+
+  state = { error: null }
+
+  handleSubmit = ev => {
+    ev.preventDefault()
+    const { user_name, user_email, password } = ev.target
+
+    console.log('registration form submitted')
+    console.log({ user_name, user_email, password })
+
+    user_name.value = ''
+    user_email.value = ''
+    password.value = ''
+    this.props.onRegistrationSuccess()
+  }
+
   
     render() {
+      const { error } = this.state
+
       return (
         <div className='registration'>
           
@@ -17,15 +36,15 @@ class RegistrationForm extends Component {
           className='RegistrationForm'
           onSubmit={this.handleSubmit}>
 
-          <div className='full_name'>
-            <label htmlFor='RegistrationForm__full_name'>
+          <div className='user_name'>
+            <label htmlFor='RegistrationForm__user_name'>
               Your Name<Required />
             </label>
                 <Input
-                name='full_name'
+                name='user_name'
                 type='text'
                 required
-                id='RegistrationForm__full_name'
+                id='RegistrationForm__user_name'
                 size='30'>
                 </Input>
           </div>
@@ -60,9 +79,8 @@ class RegistrationForm extends Component {
             Register
           </Button>
 
-          <Button className = 'button' type='submit'>
-            Login
-          </Button>
+          <Link to='/login'>Login?</Link>
+       
         </form>
         </div>
       )
@@ -70,3 +88,5 @@ class RegistrationForm extends Component {
   }
 
   export default RegistrationForm;
+
+    

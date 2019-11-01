@@ -1,5 +1,7 @@
-.RegistrationForm {
-    box-sizing: border-box;
+
+/* REGISTRATION CSSSSS */
+
+.RegistrationForm, .LoginForm {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 22px;
     padding: 0 20px;
@@ -9,10 +11,12 @@
     font-display: bold;
     background-color: #0B1C48;
     border-radius: 25px;
+    margin-top: 50px;
+    display: block;
 
 }
 
-.full_name, .user_email, .password {
+.user_name, .user_email, .password {
     color: white;
     margin: 50px;
     font-weight: bold;

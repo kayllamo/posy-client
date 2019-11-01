@@ -1,3 +1,9 @@
+.motherHero {
+    box-sizing: border-box;
+    margin: 0 auto;
+
+}
+
 .hero {
     /* Sizing */
     width: 100vw;
@@ -25,14 +31,16 @@
 .heroInner {
     background: none;
 }
+
 .heroTitle {
     font-family: Verdana;
     letter-spacing: 20px;
     font-size: 38px;
     color: white;
-    padding: 20px;
+    padding: 0 20px;
     text-shadow: 2px 2px 3px #0B1C48;
     background: none;
+    margin-top: 0px;
 
 }
 
@@ -47,3 +55,6 @@
     background: none;
 
 }
+
+
+
