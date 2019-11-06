@@ -1,0 +1,92 @@
+.dash_hero {
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    width: 100vw;
+    height: 75vh;
+    
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Text styles */
+    text-align: center;
+    background-image: url(https://images.unsplash.com/photo-1559825481-12a05cc00344?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h3 {
+    margin: 0px;
+    background: none;
+    color: white;
+    display: flexbox;
+    text-shadow: 2px 2px 3px #0B1C48;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 50%;
+    height: 30%;
+    margin: auto;
+}
+
+h4 {
+    font-family: tahoma;
+    font-size: 32px;
+    color: #0B1C48;
+    text-shadow: 1px 1px 3px gray;
+
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+/* INDIVIDUAL LOG LAYOUT */
+
+h5 {
+    background-color: darkseagreen;
+    color: white;
+    font-size: 18px;
+    text-align: left;
+    padding-left: 5px;
+    padding-bottom: 30px;
+    margin: 10px;
+    text-shadow: 2px 2px 2px gray;
+
+}
+
+h6 {
+    background-color: darkseagreen;
+    font-size: 16px;
+    text-align: left;
+    padding-left: 5px;
+    margin: 10px;
+    color: #0B1C48;
+    text-shadow: 1px 1px 3px white;
+
+} 
+
+.dash_log_box {
+    border: 1px solid black;
+    margin: 10px 20px;
+    background-color: darkseagreen;
+    border-radius: 15px;
+
+}
+
+.dash_logs {
+    margin: 15px 7px;
+}
+
+.button {
+    font-size: 14px;
+    
+    
+}
+

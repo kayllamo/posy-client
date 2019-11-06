@@ -1,21 +1,13 @@
-.motherHero {
-    box-sizing: border-box;
-    margin: 0 auto;
 
-}
 
 .hero {
     /* Sizing */
     width: 100vw;
     height: 100vh;
     
-    /* Flexbox stuff */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
     /* Text styles */
     text-align: center;
+
     
     /* Background styles */
     background-image: url(https://codetheweb.blog/assets/img/posts/full-image-hero/image.jpg);
@@ -24,12 +16,12 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
 
-    /* space after image */
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
-.heroInner {
+.herotext {
     background: none;
+    padding: 150px 30px;
 }
 
 .heroTitle {
@@ -37,7 +29,7 @@
     letter-spacing: 20px;
     font-size: 38px;
     color: white;
-    padding: 0 20px;
+    padding: 50px 20px;
     text-shadow: 2px 2px 3px #0B1C48;
     background: none;
     margin-top: 0px;
@@ -49,11 +41,70 @@
     letter-spacing: 5px;
     font-size: 22px;
     color: white;
-    padding: 20px;
+    padding: 0 20px;
     text-shadow: 1px 2px 1px #0B1C48;
     margin-bottom: 50px;
     background: none;
 
+}
+
+.herolinks {
+    border-radius: 15px;
+    padding: 8px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    border-right: 1px solid #ccc; 
+    margin: 50px;
+    background-color: peru;
+
+}
+
+/* ABOUT CSSSSSS */
+
+
+.aboutInner1, .aboutInner2, .aboutInner3 {
+    /* Sizing */
+    width: 100vw;
+    height: 40vh;
+    
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Text styles */
+    text-align: center;
+    
+    /* Background styles */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    border-radius: 25px;
+    margin-top: 50px;
+ 
+}
+
+.aboutTitle, .aboutTag {
+    background: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    letter-spacing: 6px;
+    text-shadow: 2px 2px 3px #0B1C48;
+}
+
+.aboutInner2 {
+    background-image: url(https://images.unsplash.com/photo-1531762834015-57aa765c6047?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
+}
+
+.aboutInner1 {
+    background-image: url(https://www.nationalgeographic.com/content/dam/news/photos/000/607/60780.jpg);
+}
+
+.aboutInner3 {
+    background-image: url(https://wordpress.accuweather.com/wp-content/uploads/2019/02/snow-in-pinehurst-seattle-washington-2-9-19.31.5620AM.png);
 }
 
 

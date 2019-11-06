@@ -1,6 +1,7 @@
 
 /* REGISTRATION CSSSSS */
 
+
 .RegistrationForm, .LoginForm {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 22px;
@@ -23,12 +24,12 @@
     background-color: #0B1C48;
 }
 
-h3 {
-    margin: 50px 10px 10px 10px;
+.registrationTitle, .loginTitle {
+    margin: 40px auto;
     font-size: 22px;
     letter-spacing: 5px;
     text-shadow: 1px 1px 3px gray;
-
+    color: peru;
 }
 
 .button {
@@ -53,7 +54,7 @@ input[type=text], input[type=password] {
   }
 
 input[type=text]:focus, input[type=password]:focus {
-    border: 3px solid black;
+    border: 3px solid peru;
 }
 
 label, input, span {
@@ -65,4 +66,10 @@ label, input, span {
 
 label {
     margin-bottom: 5px;
+}
+
+.registration_login {
+    background-color: #0B1C48;
+    color: white;
+    font-size: 16px;
 }

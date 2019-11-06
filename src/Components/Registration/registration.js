@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import { Button, Input, Required } from '../../Utils';
+import AuthApiService from '../../Services/auth-api-service';
 import { Link } from 'react-router-dom';
+import './registration.css';
 
 
-class RegistrationForm extends Component {
+export default class RegistrationForm extends Component {
   static defaultProps = {
     onRegistrationSuccess: () => {}
   }
@@ -14,79 +16,79 @@ class RegistrationForm extends Component {
     ev.preventDefault()
     const { user_name, user_email, password } = ev.target
 
-    console.log('registration form submitted')
-    console.log({ user_name, user_email, password })
-
+    this.setState({ error: null })
+    AuthApiService.postUser({
+      user_email: user_email.value,
+      password: password.value,
+      user_name: user_name.value,
+    })
+    .then(user => {
     user_name.value = ''
     user_email.value = ''
     password.value = ''
     this.props.onRegistrationSuccess()
+  })
+    .catch(res => {
+      this.setState({ error: res.error })
+    })
   }
-
   
-    render() {
-      const { error } = this.state
+render() {
+  const { error } = this.state
 
-      return (
-        <div className='registration'>
+return (
+  <form
+    className='RegistrationForm'
+    onSubmit={this.handleSubmit}
+  >
+    <div className='registration'>
           
-          <h3>CREATE AN ACCOUNT</h3>
+    <h3 className='registrationTitle'>CREATE AN ACCOUNT</h3>
 
-        <form
-          className='RegistrationForm'
-          onSubmit={this.handleSubmit}>
+    <div role='alert'>
+      {error && <p className='red'>{error}</p>}
+    </div>
+    <div className='user_name'>
+      <label htmlFor='RegistrationForm__user_name'>
+        Full name <Required />
+      </label>
+      <Input
+        name='user_name'
+        type='text'
+        required
+        id='RegistrationForm__user_name'>
+      </Input>
+    </div>
+    <div className='user_email'>
+      <label htmlFor='RegistrationForm__user_email'>
+        Email Address <Required />
+      </label>
+      <Input
+        name='user_email'
+        type='text'
+        required
+        id='RegistrationForm__user_email'>
+      </Input>
+    </div>
+    <div className='password'>
+      <label htmlFor='RegistrationForm__password'>
+        Password <Required />
+      </label>
+      <Input
+        name='password'
+        type='password'
+        required
+        id='RegistrationForm__password'>
+      </Input>
+    </div>
+    <Button className = 'button' type='submit'>
+      Register
+    </Button>
 
-          <div className='user_name'>
-            <label htmlFor='RegistrationForm__user_name'>
-              Your Name<Required />
-            </label>
-                <Input
-                name='user_name'
-                type='text'
-                required
-                id='RegistrationForm__user_name'
-                size='30'>
-                </Input>
-          </div>
-          
-          <div className='user_email'>
-            <label htmlFor='RegistrationForm__user_email'>
-              Email Address<Required />
-            </label>
-            <Input
-              name='user_email'
-              type='text'
-              required
-              id='RegistrationForm__user_email'
-              size='30'>
-            </Input>
-          </div>
+    <Link className='registration_login' to='/login'>Login?</Link>
 
-          <div className='password'>
-            <label htmlFor='RegistrationForm__password'>
-              Password<Required />
-            </label>
-            <Input
-              name='password'
-              type='password'
-              required
-              id='RegistrationForm__password'
-              size='30'>
-            </Input>
-          </div>
-
-          <Button className = 'button' type='submit'>
-            Register
-          </Button>
-
-          <Link to='/login'>Login?</Link>
-       
-        </form>
-        </div>
-      )
-    }
-  }
-
-  export default RegistrationForm;
-
-    
+  </div>
+  </form>
+)
+}
+}

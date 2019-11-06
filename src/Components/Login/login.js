@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import TokenService from '../../Services/token-service'
+import AuthApiService from '../../Services/auth-api-service'
 import { Button, Input } from '../../Utils'
 
 export default class LoginForm extends Component {
@@ -10,53 +12,79 @@ export default class LoginForm extends Component {
 
   handleSubmitBasicAuth = ev => {
     ev.preventDefault()
-    const { user_name, password } = ev.target
+    const { user_email, password } = ev.target
 
-    user_name.value = ''
+    TokenService.saveAuthToken(
+      TokenService.makeBasicAuthToken(user_email.value, password.value)
+    )
+
+    user_email.value = ''
     password.value = ''
     this.props.onLoginSuccess()
   }
 
-  render() {
-    const { error } = this.state
-    return (
-        <div className='login'>
-          
-        <h3>LOGIN TO YOUR ACCOUNT</h3>
+  handleSubmitJwtAuth = ev =>{
+    ev.preventDefault()
 
-      <form
-        className='LoginForm'
-        onSubmit={this.handleSubmitBasicAuth}
-      >
-        <div role='alert'>
-          {error && <p className='red'>{error}</p>}
-        </div>
+    this.setState({error: null})
 
-        <div className='user_email'>
-          <label htmlFor='LoginForm__user_email'>
-            Email Address
-          </label>
-          <Input
-            name='user_email'
-            id='LoginForm__user_email'>
-          </Input>
-        </div>
-        
-        <div className='password'>
-          <label htmlFor='LoginForm__password'>
-            Password
-          </label>
-          <Input
-            name='password'
-            type='password'
-            id='LoginForm__password'>
-          </Input>
-        </div>
-        <Button className = 'button' type='submit'>
-          Login
-        </Button>
-      </form>
-    </div>
-    )
+    const {user_email, password} = ev.target
+
+    AuthApiService.postLogin({
+      user_email: user_email.value,
+      password: password.value,
+    })
+      .then(res =>{
+        user_email.value = ''
+        password.value = ''
+        TokenService.saveAuthToken(res.authToken)
+        this.props.onLoginSuccess()
+      })
+      .catch(res =>{
+        this.setState({error: res.error})
+      })
   }
+
+render() {
+  const { error } = this.state
+  return (
+    <form
+      className='LoginForm'
+      onSubmit={this.handleSubmitJwtAuth}
+    >
+      <div className='login'>
+          
+      <h3 className='loginTitle'>LOGIN TO YOUR ACCOUNT</h3>
+  
+      <div role='alert'>
+        {error && <p className='red'>{error}</p>}
+      </div>
+      <div className='user_email'>
+        <label htmlFor='LoginForm__user_email'>
+          User name
+        </label>
+        <Input
+          required
+          name='user_email'
+          id='LoginForm__user_email'>
+        </Input>
+      </div>
+      <div className='password'>
+        <label htmlFor='LoginForm__password'>
+          Password
+        </label>
+        <Input
+          required
+          name='password'
+          type='password'
+          id='LoginForm__password'>
+        </Input>
+      </div>
+      <Button className='button' type='submit'>
+        Login
+      </Button>
+    </div>
+    </form>
+  )
+}
 }
