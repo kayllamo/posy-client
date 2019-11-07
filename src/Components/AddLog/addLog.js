@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Input } from '../../Utils';
 import './addLog.css';
-import PosyContext from '../../PosyContext';
+import PosyContext from '../../lol';
 import config from '../../config'; 
 
 export default class AddLogForm extends Component {
@@ -21,12 +21,7 @@ updateFormEntry(e) {
     const name = e.target.name;
     const value = e.target.value;
     let id;
-    if (e.target.selectedOptions) {
-        id = e.target.selectedOptions[0].id;
-        this.setState({
-            'folderId': id 
-        })
-    }
+    
     this.setState({
         [e.target.name]: e.target.value,
         
@@ -76,7 +71,6 @@ handleSubmit(e) {
     const log = {
         log_title: title,
         log_content: content,
-        log_date: new Date()
     }
 
     this.setState({error: null})
