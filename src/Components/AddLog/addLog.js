@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Button, Input } from '../../Utils';
 import './addLog.css';
-import PosyContext from '../../posyContext';
+import PosyContext from '../../PosyContext';
 import config from '../../config'; 
 
 export default class AddLogForm extends Component {
   state = {
-    title: "",
+    log_name: "",
     log_tag: "",
     log_entry: ""
 };

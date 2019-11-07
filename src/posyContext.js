@@ -1,27 +1,23 @@
 import React, { Component } from 'react'
 
-export const nullThing = {
-  author: {},
-  tags: [],
-}
-
-const PosyContext = React.createContext({
-  thing: nullThing,
-  reviews: [],
+const LogContext = React.createContext({
+  LogList: [],
   error: null,
   setError: () => {},
-  clearError: () => { },
-  clearLog: () => {},
-  addLog: () => {},
+  clearError: () => {},
+  setLogList: () => {},
 })
+export default LogContext
 
-export default PosyContext
-
-export class PosyProvider extends Component {
+export class LogProvider extends Component {
   state = {
-    log: nullLog,
+    LogList: [],
     error: null,
   };
+
+  setLogList = logList => {
+    this.setState({ logList })
+  }
 
   setError = error => {
     console.error(error)
@@ -32,30 +28,18 @@ export class PosyProvider extends Component {
     this.setState({ error: null })
   }
 
-  clearLog = () => {
-    this.setLog(nullThing)
-  }
-
-  addLog = log => {
-    this.setLog([
-      ...this.state.Log,
-      log
-    ])
-  }
-
   render() {
     const value = {
-      log: this.state.log,
+      logList: this.state.logList,
       error: this.state.error,
       setError: this.setError,
       clearError: this.clearError,
-      clearLog: this.clearLog,
-      addLog: this.addLog,
+      setLogList: this.setLogList,
     }
     return (
-      <PosyContext.Provider value={value}>
+      <LogContext.Provider value={value}>
         {this.props.children}
-      </PosyContext.Provider>
+      </LogContext.Provider>
     )
   }
 }

@@ -6,8 +6,8 @@ import PublicOnlyRoute from './Routes/PublicOnlyRoute';
 import RegistrationPage from './Routes/RegistrationRoute';
 import LoginPage from './Routes/LoginRoute';
 import './App.css';
-// import AddLogForm from './Components/AddLog/addLog';
-// import EditLogForm from './Components/EditLog/editLog';
+import AddLogForm from './Components/AddLog/addLog';
+import EditLogForm from './Components/EditLog/editLog';
 import Dashboard from './Components/Dashboard/dashboard';
 
 // burnt sienna: peru
@@ -16,18 +16,6 @@ import Dashboard from './Components/Dashboard/dashboard';
 // teal: #016367
 // yellow: 
 // gray: 
-
-/* 
-
-            <Route
-            path='/addlog'
-            component={AddLogForm}
-          />
-            <Route
-            path='/editlog'
-            component={EditLogForm}
-          />
-*/
 
 class App extends Component {
   state = { hasError: false }
@@ -43,18 +31,26 @@ class App extends Component {
         {this.state.hasError && <p className='client_red'>Oh no! Something went wrong.</p>}
       <main className='App__main'>
         <Switch>
-          <Route 
+          <Route
               exact 
               path={'/'}
               component={Hero}
             />
-          <PublicOnlyRoute
+          <Route
               path='/register'
               component={RegistrationPage}
             />
-          <PublicOnlyRoute
+          <Route
             path='/login'
             component={LoginPage}
+          />
+          <Route
+            path='/addlog'
+            component={AddLogForm}
+          />
+          <Route
+            path='/editlog'
+            component={EditLogForm}
           />
            <PrivateRoute
             path='/dashboard'
