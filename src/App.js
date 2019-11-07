@@ -40,16 +40,13 @@ class App extends Component {
   render() {
   return (
     <div className='App'>
-         <header className='App__header'>
-          <Hero />
-        </header>
 
       <main className='App__main'>
       {this.state.hasError && <p className='red'>There was an error! Oh no!</p>}
         <Switch>
           <Route 
               exact 
-              path={'/'}
+              path={'/api'}
               component={Hero}
             />
           <PublicOnlyRoute

@@ -28,15 +28,15 @@ export default class LoginForm extends Component {
 
     this.setState({error: null})
 
-    const {user_email, password} = ev.target
+    const {user_email, user_password} = ev.target
 
     AuthApiService.postLogin({
       user_email: user_email.value,
-      password: password.value,
+      user_password: user_password.value,
     })
       .then(res =>{
         user_email.value = ''
-        password.value = ''
+        user_password.value = ''
         TokenService.saveAuthToken(res.authToken)
         this.props.onLoginSuccess()
       })
@@ -61,7 +61,7 @@ render() {
       </div>
       <div className='user_email'>
         <label htmlFor='LoginForm__user_email'>
-          User name
+          Email Address
         </label>
         <Input
           required
@@ -69,15 +69,15 @@ render() {
           id='LoginForm__user_email'>
         </Input>
       </div>
-      <div className='password'>
-        <label htmlFor='LoginForm__password'>
+      <div className='user_password'>
+        <label htmlFor='LoginForm__user_password'>
           Password
         </label>
         <Input
           required
-          name='password'
+          name='user_password'
           type='password'
-          id='LoginForm__password'>
+          id='LoginForm__user_password'>
         </Input>
       </div>
       <Button className='button' type='submit'>
