@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Input } from '../../Utils';
 import './addLog.css';
-import PosyContext from '../../lol';
+import PosyContext from '../../PosyContext';
 import config from '../../config'; 
 
 export default class AddLogForm extends Component {
