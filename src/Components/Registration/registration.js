@@ -3,6 +3,7 @@ import { Button, Input, Required } from '../../Utils';
 import AuthApiService from '../../Services/auth-api-service';
 import { Link } from 'react-router-dom';
 import './registration.css';
+import Nav from '../Nav/nav';
 
 
 export default class RegistrationForm extends Component {
@@ -37,6 +38,8 @@ render() {
   const { error } = this.state
 
 return (
+  <div className='mother'>
+  <Nav />
   <form
     className='RegistrationForm'
     onSubmit={this.handleSubmit}
@@ -48,6 +51,7 @@ return (
     <div role='alert'>
       {error && <p className='red'>{error}</p>}
     </div>
+    
     <div className='user_name'>
       <label htmlFor='RegistrationForm__user_name'>
         Full name <Required />
@@ -89,6 +93,7 @@ return (
 
   </div>
   </form>
+  </div>
 )
 }
 }

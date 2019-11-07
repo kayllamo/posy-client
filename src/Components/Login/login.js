@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import TokenService from '../../Services/token-service'
 import AuthApiService from '../../Services/auth-api-service'
 import { Button, Input } from '../../Utils'
+import Nav from '../Nav/nav'
 
 export default class LoginForm extends Component {
   static defaultProps = {
@@ -48,43 +49,51 @@ export default class LoginForm extends Component {
 render() {
   const { error } = this.state
   return (
-    <form
+  
+    <div className='mother'>
+      <Nav />
+   
+  <form
       className='LoginForm'
       onSubmit={this.handleSubmitJwtAuth}
     >
+  
       <div className='login'>
           
       <h3 className='loginTitle'>LOGIN TO YOUR ACCOUNT</h3>
-  
+      
       <div role='alert'>
         {error && <p className='red'>{error}</p>}
       </div>
+
       <div className='user_email'>
         <label htmlFor='LoginForm__user_email'>
           Email Address
         </label>
         <Input
-          required
           name='user_email'
+          type='text'
+          required
           id='LoginForm__user_email'>
         </Input>
       </div>
       <div className='user_password'>
         <label htmlFor='LoginForm__user_password'>
-          Password
+          Password 
         </label>
         <Input
-          required
           name='user_password'
           type='password'
+          required
           id='LoginForm__user_password'>
         </Input>
       </div>
       <Button className='button' type='submit'>
-        Login
+        Login 
       </Button>
     </div>
     </form>
+    </div>
   )
 }
 }

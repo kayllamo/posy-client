@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import './dashboard.css';
-import { Button } from '../../Utils';
-import Graph from './chart.jpeg';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 class Dashboard extends Component {
@@ -18,14 +16,11 @@ class Dashboard extends Component {
                         <h4>Welcome back, Kayla.</h4>
                         <p>Take a few minutes to jot down something on your mind. Tag your entry to track any patterns.</p>
                     
-                    <div className='dash_graph'>
-                        <img src={Graph} />
-                        
-                    </div>
-                    
                     <div className='dash_logs'>
                     
-                    <Link to='/addlog'>New Entry</Link>
+    
+                        <Link className='addLogButton' to='/addlog'>New Entry</Link>
+                
         
 
                         <div className='dash_log_box'>

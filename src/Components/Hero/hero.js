@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './hero.css';
 import { Link } from 'react-router-dom';
+import Nav from '../Nav/nav';
 
 
 class Hero extends Component {
@@ -10,11 +11,7 @@ class Hero extends Component {
             <div className='motherHero'>
             
             <div className='navbar'>
-              <ul>
-                <Link className='navlinks' to='/'>Home</Link>
-                <Link className='navlinks' to='/register'>Register</Link>
-                <Link className='navlinks' to='/login'>Login</Link>              
-              </ul>
+              <Nav />
             </div>
             
             <div className='hero'>
