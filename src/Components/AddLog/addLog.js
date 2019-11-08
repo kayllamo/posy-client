@@ -16,7 +16,8 @@ goBack = () => {
     this.props.history.goBack();
 }
 
-updateFormEntry(e) {       
+updateFormEntry(e) { 
+          
     const name = e.target.name;
     const value = e.target.value;
     
@@ -65,10 +66,10 @@ formValid() {
 
 handleSubmit(e) {
     e.preventDefault();
-    const { title, content } = this.state;
+    const { log_name, log_entry } = this.state;
     const log = {
-        log_name: title,
-        log_entry: content,
+        log_name: log_name,
+        log_entry: log_entry,
     }
 
     this.setState({error: null})
@@ -145,7 +146,7 @@ handleSubmit(e) {
         <button 
           type="submit" 
           className="button"
-          disabled={!this.state.formValid}>
+        >
           Save
           </button>
 

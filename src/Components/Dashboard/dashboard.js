@@ -1,10 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './dashboard.css';
 import { Link } from 'react-router-dom';
 import Nav from '../Nav/nav';
 import PosyContext from '../../PosyContext';
 import Log from '../Log/Log';
 import {findLog} from '../../log-helpers';
+import LogList from '../Log/LogList';
 
 
 export default class Dashboard extends React.Component {
@@ -56,13 +57,8 @@ export default class Dashboard extends React.Component {
                         <Link className='addLogButton' to='/addlog'>New Entry</Link>
                 
                         <section className='LogList'>
-                            <Log
-                            id={log.id}
-                            log_name={log.log_name}
-                            log_tag={log.log_tag}
-                            log_entry={log.log_entry}
-                            onDeleteLog={this.handleDeleteLog}
-                            />
+                            <LogList />
+
                         </section>
 
                     </div>

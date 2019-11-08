@@ -46,4 +46,4 @@ const LogApiService = {
   }
 }
 
-export default LogApiService
+export default LogApiService;
