@@ -1,0 +1,13 @@
+
+.LogList {
+    background-color: #efefef;
+    height: 100%;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .LogList__content {
+    color: goldenrod;
+    max-width: 380px;
+  }
+  

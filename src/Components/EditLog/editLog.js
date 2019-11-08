@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import { Button, Input } from '../../Utils';
 import './editLog.css';
+import PosyContext from '../../PosyContext';
 
 export default class EditLogForm extends Component {
-/* come back to this section
-add this to line 19 
 
-        <div role='alert'>
-          {error && <p className='red'>{error}</p>}
-        </div>
 
-*/
+static contextType = PosyContext;
+
+goBack = () => {
+    this.props.history.goBack();
+}
 
 
   render() {
@@ -63,9 +63,12 @@ add this to line 19
           Save
         </Button>
 
-        <Button className = 'button' type='submit'>
-          Delete
-        </Button>
+        <button 
+          type="button" 
+          className="button"
+          onClick={()=> this.goBack()}>
+          Cancel
+          </button>
       </form>
     </div>
     )

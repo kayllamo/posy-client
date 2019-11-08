@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Button, Input } from '../../Utils';
 import './addLog.css';
 import PosyContext from '../../PosyContext';
 import config from '../../config'; 
@@ -20,7 +19,6 @@ goBack = () => {
 updateFormEntry(e) {       
     const name = e.target.name;
     const value = e.target.value;
-    let id;
     
     this.setState({
         [e.target.name]: e.target.value,
@@ -69,8 +67,8 @@ handleSubmit(e) {
     e.preventDefault();
     const { title, content } = this.state;
     const log = {
-        log_title: title,
-        log_content: content,
+        log_name: title,
+        log_entry: content,
     }
 
     this.setState({error: null})
@@ -105,34 +103,32 @@ handleSubmit(e) {
     const { error } = this.state
 
     return (
+      <form 
+      className='AddLogForm'
+      onSubmit={e => this.handleSubmit(e)}>
         <div className='addLog'>
         <h3>New Log</h3>
 
-      <form
-        className='addLogForm'
-        onSubmit={this.handleSubmitBasicAuth}
-      >
 
-
-        <div className='log_title'>
-          <label htmlFor='addLogForm__log_title'>
+        <div className='log_name'>
+          <label htmlFor='addLogForm__log_name'>
             Title
           </label>
-          <Input
-            name='log_title'
-            id='addLogForm__log_title'>
-          </Input>
+          <input
+            name='log_name'
+            id='addLogForm__log_name'
+            onChange={e => this.updateFormEntry(e)}/>
         </div>
         
         <div className='log_tag'>
           <label htmlFor='addLogForm__log_tag'>
             Tag
           </label>
-          <Input
+          <input
             name='log_tag'
             placeholder='optional'
-            id='addLogForm__log_tag'>
-          </Input>
+            id='addLogForm__log_tag'
+            onChange={e => this.updateFormEntry(e)}/>
         </div>
 
         <div className='log_entry'>
@@ -142,18 +138,25 @@ handleSubmit(e) {
           <textarea
             name='log_entry'
             type='text'
-            id='addLogForm__log_entry'/>
+            id='addLogForm__log_entry'
+            onChange={e => this.updateFormEntry(e)}/>
         </div>
 
-        <Button className = 'button' type='submit'>
+        <button 
+          type="submit" 
+          className="button"
+          disabled={!this.state.formValid}>
           Save
-        </Button>
+          </button>
 
-        <Button className = 'button' type='submit'>
+        <button 
+          type="button" 
+          className="button"
+          onClick={()=> this.goBack()}>
           Cancel
-        </Button>
-      </form>
+          </button>
     </div>
+    </form>
     )
   }
 }

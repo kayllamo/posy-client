@@ -47,44 +47,23 @@ img {
     width: 100%;
 }
 
+p {
+    padding-bottom: 25px;
+}
+
 /* INDIVIDUAL LOG LAYOUT */
-
-h5 {
-    background-color: darkseagreen;
-    color: white;
-    font-size: 18px;
-    text-align: left;
-    padding-left: 5px;
-    padding-bottom: 30px;
-    margin: 10px;
-    text-shadow: 2px 2px 2px gray;
-
-}
-
-h6 {
-    background-color: darkseagreen;
-    font-size: 16px;
-    text-align: left;
-    padding-left: 5px;
-    margin: 10px;
-    color: #0B1C48;
-    text-shadow: 1px 1px 3px white;
-
-} 
-
-.dash_log_box {
-    border: 1px solid black;
-    margin: 10px 20px;
-    background-color: darkseagreen;
+.addLogButton {
     border-radius: 15px;
-
+    padding: 8px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    border-right: 1px solid #ccc; 
+    margin: 50px;
+    background-color: peru;
 }
 
-.dash_logs {
-    margin: 15px 7px;
-}
-
-.button, .addLogButton {
+.button {
     font-size: 14px;
     
     

@@ -16,7 +16,7 @@
 }
 
 /* form layout css */
-.log_title, .log_tag, .log_entry {
+.log_name, .log_tag, .log_entry {
     color: white;
     margin: 30px;
     font-weight: bold;
@@ -57,7 +57,7 @@ label, input {
 }
 
 /* fields */
-#addLogForm__log_title, #addLogForm__log_tag {
+#addLogForm__log_name, #addLogForm__log_tag {
     background-color: white;
     text-align: left;
     width: 100%;
@@ -67,7 +67,7 @@ label, input {
 }
 
 /* active field */
-#addLogForm__log_title:focus , #addLogForm__log_tag:focus, #addLogForm__log_entry:focus {
+#addLogForm__log_name:focus , #addLogForm__log_tag:focus, #addLogForm__log_entry:focus {
     color: black;
     border: 3px solid lightskyblue;
 }
