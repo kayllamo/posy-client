@@ -27,7 +27,6 @@ export default class LogList extends React.Component {
   }
 
   componentWillMount() { 
-    console.log('I am about to say hello'); 
     LogApiService.getLogs()
       .then(res => {
         this.setState(
@@ -49,7 +48,7 @@ export default class LogList extends React.Component {
         />
       )
     });
-    console.log(logs);
+   
 
 
     return (

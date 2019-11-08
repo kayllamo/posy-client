@@ -52,7 +52,7 @@ class App extends Component {
             path='/editlog'
             component={EditLogForm}
           />
-           <PrivateRoute
+           <Route
             path='/dashboard'
             component={Dashboard}
           />
