@@ -1,42 +1,40 @@
 
 /* EDIT LOG CSSSSS */
 
-.editLogForm {
+.editLog {
+    background-color: #0B1C48;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 22px;
-    padding: 0px;
-    margin: 70px 5px;
+    padding: 50px 10px 10px 10px;
     border: 2px solid gray;
-    color: white;
-    font-display: bold;
-    background-color: #0B1C48;
-    border-radius: 25px;
-    margin-top: 50px;
+    min-height: 700px;
 
-}
-
-/* form layout css */
-.log_title, .log_tag, .log_entry {
-    color: white;
-    margin: 30px;
-    font-weight: bold;
-    background-color: #0B1C48;
-    
 }
 
 h3 {
     margin: 50px 10px 10px 10px;
     font-size: 22px;
     letter-spacing: 5px;
-    text-shadow: 1px 1px 3px gray;
 
 }
 
+/* form layout css */
+.log_name, .log_entry {
+    color: white;
+    text-shadow: 2px 2px gray;
+    margin: 40px;
+    font-weight: bold;
+    background-color: #0B1C48;
+}
+
+
+
 .button {
     color: white;
+    font-weight: bold;
     background-color: peru;
     font-size: 22px;
-    border: 2px solid gray;
+    border: 2px solid white;
     padding: 10px;
     margin: 20px;
     border-radius: 25px;
@@ -49,15 +47,13 @@ h3 {
 
 /* fields and titles layout 
 
-FIX THISSSSS*/
-label, input {
-    display: inline-block;
-    background-color: #0B1C48;
+/* active field */
+#editLogForm__log_name:focus, #editLogForm__log_entry:focus {
     color: black;
 }
 
 /* fields */
-#editLogForm__log_title, #editLogForm__log_tag {
+#editLogForm__log_name {
     background-color: white;
     text-align: left;
     width: 100%;
@@ -66,28 +62,26 @@ label, input {
 
 }
 
-/* active field */
-#editLogForm__log_title:focus , #editLogForm__log_tag:focus, #editLogForm__log_entry:focus {
-    color: black;
-    border: 3px solid lightskyblue;
+
+
+#editLogForm__log_name {
+    background-color: white;
+    text-align: left;
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+
 }
 
 /* log entry field css */
 #editLogForm__log_entry {
     width: 100%;
-    height: 300px;
-    box-sizing: border-box;
+    height: 200px;
     border: 2px solid #ccc;
     border-radius: 10px;
-    background-color: #f8f8f8;
+    background-color: white;
     font-size: 14px;
-    text-align: left;
+    text-align: start;
     cursor: text;
-    font-family: Arial, Helvetica, sans-serif;
-
 }
 
-label {
-    margin-bottom: 5px;
-    color: white;
-}

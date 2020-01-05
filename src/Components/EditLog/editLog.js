@@ -95,13 +95,13 @@ handleSubmit(e) {
           
         <h3>Edit Log</h3>
 
-
-        <div className='log_title'>
-            <label htmlFor='editLogForm__log_title'>
+        <div className='log_name'>
+            <label htmlFor='editLogForm__log_name'>
               Title
             </label>
-           
             <input 
+              id='editLogForm__log_name'
+              name='log_name'
               type='text'
               value={this.state.log.log_name }       
               onChange={e => this.handleChange(e)}/>
@@ -112,7 +112,9 @@ handleSubmit(e) {
             <label htmlFor='editLogForm__log_entry'>
               Entry
             </label>
-            <input
+            <textarea
+              id='editLogForm__log_entry'
+              name='log_entry'
               type='text'
               value={this.state.log.log_entry}
               onChange={e => this.handleChange(e)}
