@@ -1,34 +1,37 @@
-
+* {
+    box-sizing: border-box;
+}
 /* REGISTRATION CSSSSS */
 
+
+@media only screen and (max-width: 768px) {
 
 .RegistrationForm, .registration, .login, .LoginForm {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 22px;
-    padding: 0 20px;
-    margin: 70px 30px;
+    padding: 20px;
     border: 2px solid gray;
     color: white;
     font-display: bold;
     background-color: #0B1C48;
-    border-radius: 25px;
-    margin-top: 50px;
-    display: block;
-
 }
 
 .user_name, .user_email, .user_password {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     color: white;
-    margin: 50px;
+    margin: 10px;
+    padding: 12px;
     font-weight: bold;
     background-color: #0B1C48;
 }
 
 .registrationTitle, .loginTitle {
-    margin: 40px auto;
+    margin: 30px auto;
     font-size: 22px;
     letter-spacing: 5px;
-    text-shadow: 1px 1px 3px gray;
+    text-shadow: 1px 1px whitesmoke;
     color: peru;
 }
 
@@ -49,6 +52,7 @@
 
 input[type=text], input[type=password] {
     background-color: white;
+    padding: 5px;
     color: black;
     border: 1px solid black;
   }
@@ -60,7 +64,6 @@ input[type=text]:focus, input[type=password]:focus {
 label, input, span {
     display: inline-block;
     background-color: #0B1C48;
-    color: black;
     color: white;
 }
 
@@ -84,4 +87,101 @@ label {
     background-color: white;
     color: red;
     font-size: 16px;  
+}
+}
+
+/* 
+MEDIA QUERIES 
+MEDIA QUERIES 
+MEDIA QUERIES 
+MEDIA QUERIES 
+MEDIA QUERIES 
+MEDIA QUERIES  */
+
+
+@media only screen and (min-width: 768px) {
+    .RegistrationForm, .registration, .login, .LoginForm {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 22px;
+        padding: 20px;
+        border: 2px solid gray;
+        color: white;
+        font-display: bold;
+        background-color: #0B1C48;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    
+    .user_name, .user_email, .user_password {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        color: white;
+        margin: 10px;
+        padding: 12px;
+        font-weight: bold;
+        background-color: #0B1C48;
+    }
+    
+    .registrationTitle, .loginTitle {
+        margin: 30px auto;
+        font-size: 22px;
+        letter-spacing: 5px;
+        text-shadow: 1px 1px whitesmoke;
+        color: peru;
+    }
+    
+    .button {
+        color: white;
+        background-color: peru;
+        font-size: 22px;
+        border: 2px solid gray;
+        padding: 10px;
+        margin: 20px;
+        border-radius: 25px;
+    
+    } 
+    
+    .button:hover {
+        background-color: teal;
+    }
+    
+    input[type=text], input[type=password] {
+        background-color: white;
+        padding: 5px;
+        color: black;
+        border: 1px solid black;
+      }
+    
+    input[type=text]:focus, input[type=password]:focus {
+        border: 3px solid peru;
+    }
+    
+    label, input, span {
+        display: inline-block;
+        background-color: #0B1C48;
+        color: white;
+    }
+    
+    label {
+        margin-bottom: 5px;
+    }
+    
+    .registration_login {
+        background-color: #0B1C48;
+        color: white;
+        font-size: 16px;
+    }
+    
+    .red {
+        background-color: #0B1C48;
+        color: red;
+        font-size: 16px;
+    }
+    
+    .client_red {
+        background-color: white;
+        color: red;
+        font-size: 16px;  
+    }
 }

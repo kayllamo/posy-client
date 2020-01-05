@@ -1,3 +1,5 @@
+@media only screen and (max-width: 768px) {
+    
 .dash_hero {
     margin: 0 auto;
     text-align: center;
@@ -34,12 +36,26 @@ h3 {
     margin: auto;
 }
 
-h4 {
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid grey;
+    margin-top: 100px;
+}
+
+.welcome {
     font-family: tahoma;
     font-size: 32px;
     color: #0B1C48;
-    text-shadow: 1px 1px 3px gray;
+    text-shadow: 2px 2px goldenrod;
 
+}
+
+.yourLogs {
+    font-family: tahoma;
+    font-size: 32px;
+    color: #0B1C48;
+    text-shadow: 2px 2px goldenrod;
 }
 
 img {
@@ -48,24 +64,118 @@ img {
 }
 
 p {
-    padding-bottom: 25px;
+    padding-bottom: 40px;
 }
 
-/* INDIVIDUAL LOG LAYOUT */
+/* NEW ENTRY BUTTTON LAYOUT */
 .addLogButton {
     border-radius: 15px;
-    padding: 8px 15px;
+    padding: 10px 15px;
     text-decoration: none;
     font-weight: bold;
     color: white;
     border-right: 1px solid #ccc; 
-    margin: 50px;
-    background-color: peru;
+    background-color: goldenrod;
 }
 
 .button {
     font-size: 14px;
-    
-    
+
 }
 
+}
+
+/* 
+MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY 
+*/
+
+@media only screen and (min-width: 768px) {
+    .dash_hero {
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        width: 100vw;
+        height: 75vh;
+        
+        /* Flexbox stuff */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        /* Text styles */
+        text-align: center;
+        background-image: url(https://images.unsplash.com/photo-1559825481-12a05cc00344?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    
+    h3 {
+        margin: 0px;
+        background: none;
+        color: white;
+        display: flexbox;
+        text-shadow: 2px 2px 3px #0B1C48;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 50%;
+        height: 30%;
+        margin: auto;
+    }
+    
+    hr {
+        border: 0;
+        height: 0;
+        border-top: 1px solid grey;
+        margin-top: 100px;
+    }
+    
+    .welcome {
+        font-family: tahoma;
+        font-size: 50px;
+        color: #0B1C48;
+        text-shadow: 2px 2px goldenrod;
+    
+    }
+    
+    .yourLogs {
+        font-family: tahoma;
+        font-size: 50px;
+        color: #0B1C48;
+        text-shadow: 2px 2px goldenrod;
+    }
+    
+    img {
+        height: auto;
+        width: 100%;
+    }
+    
+    p {
+        padding-bottom: 40px;
+        font-size: 28px;
+    }
+    
+    /* NEW ENTRY BUTTTON LAYOUT */
+    .addLogButton {
+        border-radius: 15px;
+        padding: 10px 15px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 26px;
+        color: white;
+        border-right: 1px solid #ccc; 
+        background-color: goldenrod;
+    }
+
+}

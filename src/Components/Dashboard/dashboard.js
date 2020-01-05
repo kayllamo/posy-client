@@ -30,21 +30,20 @@ export default class Dashboard extends React.Component {
 
         return (
             <div className='dashboard'>
-                <Nav />
                 <div className='dash_hero'>
                         <h3>"Be mindful; be thinkful"</h3>
                 </div>
 
                 <div className='dash_main'>
-                        <h4>N A M A S T E</h4>
+                        <h4 className='welcome'>N A M A S T E</h4>
                         <p>Take a few minutes to jot down something on your mind. Rid yourself of negative energy to make space for positivity.</p>
                     
                     <div className='dash_logs'>
                     
-    
                         <Link className='addLogButton' to='/addlog'>New Entry</Link>
-                
+                <hr></hr>
                         <section className='LogList'>
+                          <h4 className='yourLogs'>Your logs</h4>
                             <LogList />
 
                         </section>

@@ -1,34 +1,109 @@
+* {
+  box-sizing: border-box;
+}
 
-.Log {
-    --note-height: 88px;
-    background-color: darkseagreen;
+
+@media only screen and (max-width: 768px) {
+
+  .Log {
+  --note-height: 60px;
+  background-color: #016367;
+  color: black;
+  height: var(--note-height);
+  margin: 25px 15px;
+  padding: 8px 0 8px 8px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.Log__delete {
+  --note-button-height: 32px;
+  background-color: goldenrod;
+  border: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+  float: right;
+  font-size: 12px;
+  height: var(--note-button-height);
+  position: relative;
+  top: calc((var(--note-button-height) + 32px) * -1);
+  transform-origin: right bottom;
+  transform: rotate(-90deg);
+  width: calc(var(--note-height));
+}
+.Log__delete:hover {
+  background-color: #0B1C48;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.Log__name {
+  font-family: var(--custom-font);
+  background-color: #016367;
+  color: white;
+  font-size: 16px;
+  margin: 0;
+  max-width: 80%;
+  min-height: 24px;
+  text-align: left;
+}
+.Log__name a {
+  background-color: #016367;
+  color: white;
+  display: block;
+  text-decoration: none;
+  text-align: left;
+  
+}
+.Log__name a:hover {
+  color: goldenrod;
+}
+
+}
+/* 
+MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY 
+*/
+
+@media only screen and (min-width: 768px) {
+  .Log {
+    --note-height: 100px;
+    background-color: #016367;
     color: black;
     height: var(--note-height);
-    margin: 50px 20px;
+    margin: 25px 25%;
     padding: 8px 0 8px 8px;
     position: relative;
-    border-radius: 25px;
-  
+    border-radius: 10px;
   }
   
   .Log__delete {
     --note-button-height: 32px;
-    background-color: peru;
+    background-color: goldenrod;
     border: 0;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     color: white;
     float: right;
-    font-size: 12px;
+    font-size: 18px;
     height: var(--note-button-height);
     position: relative;
-    top: calc((var(--note-button-height) + 32px) * -1);
+    top: calc((var(--note-button-height) + 33px) * -1);
     transform-origin: right bottom;
     transform: rotate(-90deg);
     width: calc(var(--note-height));
   }
   .Log__delete:hover {
-    background-color: #bd0909;
+    background-color: #0B1C48;
     color: white;
     cursor: pointer;
     font-weight: bold;
@@ -36,23 +111,23 @@
   
   .Log__name {
     font-family: var(--custom-font);
-    background-color: darkseagreen;
+    background-color: #016367;
     color: white;
-    font-size: 20px;
+    font-size: 22px;
     margin: 0;
-    max-width: 90%;
+    max-width: 80%;
     min-height: 24px;
-    text-align: center;
+    text-align: left;
   }
   .Log__name a {
-    background-color: darkseagreen;
+    background-color: #016367;
     color: white;
     display: block;
     text-decoration: none;
+    text-align: left;
     
   }
   .Log__name a:hover {
-    color: #FFB72F;
+    color: goldenrod;
   }
-  
-  
+}

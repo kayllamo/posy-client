@@ -45,7 +45,7 @@ return (
   >
     <div className='registration'>
           
-    <h3 className='registrationTitle'>CREATE AN ACCOUNT</h3>
+    <h3 className='registrationTitle'>REGISTER TO POSY</h3>
 
     
     <div className='user_name'>

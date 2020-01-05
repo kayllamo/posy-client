@@ -43,9 +43,7 @@ class App extends Component {
             path='/login'
             component={LoginPage}
           />
-          <Route
-            path='/addlog'
-            component={AddLogForm}
+          <Route path='/addlog'component={AddLogForm}
           />
           <Route exact path={'/logs/:log_id'} component={EditLogForm} />
           />

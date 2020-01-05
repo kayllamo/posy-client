@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import config from '../../config';
 import './editLog.css';
-import PosyContext from '../../PosyContext';
 import LogApiService from '../../Services/log-api-service';
+import config from '../../config';
 
 export default class EditLogForm extends Component {
   static defaultProps = {
@@ -12,9 +11,13 @@ export default class EditLogForm extends Component {
   constructor (props) {
     super(props);
     this.state = {
-        log_name: props.log_name || '',
-        log_entry: props.log_entry || ''
-    };
+      log: {
+        log_name: '',
+        log_entry: ''
+    }
+  };
+  this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
 
@@ -25,31 +28,69 @@ goBack = () => {
 
 componentDidMount(){
   const logId = this.props.match.params.log_id
-  console.log(logId)
+  console.log('Log ID = ', logId)
   LogApiService.getLog(logId)
       .then(log =>{
           this.setState({log: log})
+          console.log('this.state.log.log_name == >', this.state.log.log_name)
+          console.log('this.state.log.log_entry == >', this.state.log.log_entry)
       })
 }
 
 handleChange(event) {
-  this.setState({value: event.target.value});
+  this.setState({
+    log: {
+      log_name: event.target.log_name, 
+      log_entry: event.target.log_entry
+    }
+    });
 }
 
-handleSubmit(event) {
-  alert('A name was submitted: ' + this.state.value);
-  event.preventDefault();
+handleSubmit(e) {
+  e.preventDefault();
+  const logId = this.props.match.params.log_id
+  const { log_name, log_entry } = this.state;
+  const log = {
+      log_name: log_name,
+      log_entry: log_entry,
+  }
+
+  this.setState({error: null})
+
+  
+  fetch(`${config.API_ENDPOINT}/logs/${logId}`, {
+      method: 'PUT',
+      body: JSON.stringify(log),
+      headers: {
+          'content-type': 'application/json'
+      }
+  })
+  .then(res => {
+      if (!res.ok) {
+          return res.json().then(err => {
+              console.log(`Error is: ${err}`)
+              throw err
+          })
+      }
+      return res.json()
+  })
+  .then(data => {
+      this.goBack()
+      this.context.addLog(data)
+  })
+  .catch(err => {
+      this.setState({ err })
+  })
 }
 
 
   render() {
-    console.log(this.state.log);
+
         
   return (
       <form
       className='editLogForm'
-      onSubmit={this.handleSubmit}>
-
+      onSubmit={e => this.handleSubmit(e)} >
         <div className='editLog'>
           
         <h3>Edit Log</h3>
@@ -62,7 +103,7 @@ handleSubmit(event) {
            
             <input 
               type='text'
-              value={this.state.log_name}            
+              value={this.state.log.log_name }       
               onChange={e => this.handleChange(e)}/>
 
         </div>
@@ -73,7 +114,7 @@ handleSubmit(event) {
             </label>
             <input
               type='text'
-              value={this.state.log_entry}
+              value={this.state.log.log_entry}
               onChange={e => this.handleChange(e)}
               />
         </div>

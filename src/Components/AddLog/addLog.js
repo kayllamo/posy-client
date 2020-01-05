@@ -106,7 +106,7 @@ handleSubmit(e) {
       className='AddLogForm'
       onSubmit={e => this.handleSubmit(e)}>
         <div className='addLog'>
-        <h3>New Log</h3>
+        <h3 className='newLog'>New Log</h3>
 
 
         <div className='log_name'>

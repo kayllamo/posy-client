@@ -60,7 +60,7 @@ render() {
   
       <div className='login'>
           
-      <h3 className='loginTitle'>LOGIN TO YOUR ACCOUNT</h3>
+      <h3 className='loginTitle'>LOGIN TO POSY</h3>
       
       <div role='alert'>
         {error && <p className='red'>{error}</p>}
