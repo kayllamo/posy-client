@@ -25,7 +25,7 @@ const LogApiService = {
           : res.json()
       )
   },
-  postLog(logId, log_entry) {
+  postLog(log_name, log_entry) {
     return fetch(`${config.API_ENDPOINT}/logs`, {
       method: 'POST',
       headers: {
@@ -33,7 +33,25 @@ const LogApiService = {
         'authorization': `bearer ${TokenService.getAuthToken()}`,
       },
       body: JSON.stringify({
-        log_id: logId,
+        log_name,
+        log_entry
+      }),
+    })
+      .then(res =>
+        (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : res.json()
+      )
+  },
+  patchLog(logId, log_name, log_entry) {
+    return fetch(`${config.API_ENDPOINT}/logs/${logId}`, {
+      method: 'PATCH',
+      headers: {
+        'content-type': 'application/json',
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
+      },
+      body: JSON.stringify({
+        log_name,
         log_entry
       }),
     })
@@ -43,6 +61,7 @@ const LogApiService = {
           : res.json()
       )
   }
+
 }
 
 export default LogApiService;

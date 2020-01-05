@@ -37,6 +37,7 @@ componentDidMount(){
       })
 }
 
+
 handleChange(event) {
   this.setState({
     log: {
@@ -46,41 +47,38 @@ handleChange(event) {
     });
 }
 
+
+
 handleSubmit(e) {
   e.preventDefault();
   const logId = this.props.match.params.log_id
-  const { log_name, log_entry } = this.state;
-  const log = {
-      log_name: log_name,
-      log_entry: log_entry,
-  }
 
-  this.setState({error: null})
+    const { log_name, log_entry } = this.state;
+    const log = {
+        log_name: log_name,
+        log_entry: log_entry
+    }
 
+    this.setState({error: null})
+
+    
+    fetch(`${config.API_ENDPOINT}/logs/${logId}`, {
+        method: 'PATCH',
+        body: JSON.stringify(log),
+        headers: {
+            'content-type': 'application/json'
+        }
+    })
+    .then(res => {
+        if (!res.ok) {
+            return res.json().then(err => {
+                console.log(`Error is: ${err}`)
+                throw err
+            })
+        }
+        return res.json()
+    })
   
-  fetch(`${config.API_ENDPOINT}/logs/${logId}`, {
-      method: 'PUT',
-      body: JSON.stringify(log),
-      headers: {
-          'content-type': 'application/json'
-      }
-  })
-  .then(res => {
-      if (!res.ok) {
-          return res.json().then(err => {
-              console.log(`Error is: ${err}`)
-              throw err
-          })
-      }
-      return res.json()
-  })
-  .then(data => {
-      this.goBack()
-      this.context.addLog(data)
-  })
-  .catch(err => {
-      this.setState({ err })
-  })
 }
 
 

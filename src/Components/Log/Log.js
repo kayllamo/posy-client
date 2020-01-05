@@ -15,6 +15,7 @@ export default class Log extends React.Component {
   static contextType = PosyContext;
 
   handleClickDelete = () => {
+    window.location.reload(false);
     const logId = this.props.id
 
 
