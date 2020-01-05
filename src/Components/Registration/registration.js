@@ -35,7 +35,6 @@ export default class RegistrationForm extends Component {
   }
   
 render() {
-  const { error } = this.state
 
 return (
   <div className='mother'>
@@ -48,9 +47,6 @@ return (
           
     <h3 className='registrationTitle'>CREATE AN ACCOUNT</h3>
 
-    <div role='alert'>
-      {error && <p className='red'>{error}</p>}
-    </div>
     
     <div className='user_name'>
       <label htmlFor='RegistrationForm__user_name'>

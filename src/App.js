@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import { Route, Switch } from 'react-router-dom'
 import Hero from './Components/Hero/hero';
-import PrivateRoute from './Routes/PrivateRoute';
-import PublicOnlyRoute from './Routes/PublicOnlyRoute';
+
 import RegistrationPage from './Routes/RegistrationRoute';
 import LoginPage from './Routes/LoginRoute';
 import './App.css';
@@ -48,9 +47,7 @@ class App extends Component {
             path='/addlog'
             component={AddLogForm}
           />
-          <Route
-            path='/editlog'
-            component={EditLogForm}
+          <Route exact path={'/logs/:log_id'} component={EditLogForm} />
           />
            <Route
             path='/dashboard'

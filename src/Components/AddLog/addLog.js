@@ -6,7 +6,6 @@ import config from '../../config';
 export default class AddLogForm extends Component {
   state = {
     log_name: "",
-    log_tag: "",
     log_entry: ""
 };
 
@@ -101,7 +100,6 @@ handleSubmit(e) {
 }
 
   render() {
-    const { error } = this.state
 
     return (
       <form 
@@ -120,17 +118,7 @@ handleSubmit(e) {
             id='addLogForm__log_name'
             onChange={e => this.updateFormEntry(e)}/>
         </div>
-        
-        <div className='log_tag'>
-          <label htmlFor='addLogForm__log_tag'>
-            Tag
-          </label>
-          <input
-            name='log_tag'
-            placeholder='optional'
-            id='addLogForm__log_tag'
-            onChange={e => this.updateFormEntry(e)}/>
-        </div>
+  
 
         <div className='log_entry'>
           <label htmlFor='addLogForm__log_entry'>

@@ -25,7 +25,7 @@ const LogApiService = {
           : res.json()
       )
   },
-  postLog(logId, log_tag, log_entry) {
+  postLog(logId, log_entry) {
     return fetch(`${config.API_ENDPOINT}/logs`, {
       method: 'POST',
       headers: {
@@ -34,8 +34,7 @@ const LogApiService = {
       },
       body: JSON.stringify({
         log_id: logId,
-        log_tag,
-        log_entry,
+        log_entry
       }),
     })
       .then(res =>

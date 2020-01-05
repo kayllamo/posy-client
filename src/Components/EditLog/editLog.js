@@ -1,67 +1,84 @@
 import React, { Component } from 'react';
-import { Button, Input } from '../../Utils';
+import config from '../../config';
 import './editLog.css';
 import PosyContext from '../../PosyContext';
+import LogApiService from '../../Services/log-api-service';
 
 export default class EditLogForm extends Component {
+  static defaultProps = {
+    match: { params: {}, },
+}
 
+  constructor (props) {
+    super(props);
+    this.state = {
+        log_name: props.log_name || '',
+        log_entry: props.log_entry || ''
+    };
+  }
 
-static contextType = PosyContext;
 
 goBack = () => {
     this.props.history.goBack();
 }
 
 
+componentDidMount(){
+  const logId = this.props.match.params.log_id
+  console.log(logId)
+  LogApiService.getLog(logId)
+      .then(log =>{
+          this.setState({log: log})
+      })
+}
+
+handleChange(event) {
+  this.setState({value: event.target.value});
+}
+
+handleSubmit(event) {
+  alert('A name was submitted: ' + this.state.value);
+  event.preventDefault();
+}
+
+
   render() {
-    // const { error } = this.state
-    return (
+    console.log(this.state.log);
+        
+  return (
+      <form
+      className='editLogForm'
+      onSubmit={this.handleSubmit}>
+
         <div className='editLog'>
           
         <h3>Edit Log</h3>
 
-      <form
-        className='editLogForm'
-        onSubmit={this.handleSubmitBasicAuth}
-      >
-
 
         <div className='log_title'>
-          <label htmlFor='editLogForm__log_title'>
-            Title
-          </label>
-          <Input
-            name='log_title'
-            placeholder='Previous log title'
-            id='editLogForm__log_title'>
-          </Input>
-        </div>
-        
-        <div className='log_tag'>
-          <label htmlFor='editLogForm__log_tag'>
-            Tag
-          </label>
-          <Input
-            name='log_tag'
-            placeholder='Previous log tag'
-            id='editLogForm__log_tag'>
-          </Input>
+            <label htmlFor='editLogForm__log_title'>
+              Title
+            </label>
+           
+            <input 
+              type='text'
+              value={this.state.log_name}            
+              onChange={e => this.handleChange(e)}/>
+
         </div>
 
         <div className='log_entry'>
-          <label htmlFor='editLogForm__log_entry'>
-            Entry
-          </label>
-          <textarea
-            name='log_entry'
-            type='text'
-            placeholder='This is previous log entry information available for edit. All fields should be editable with option to Save or Delete entire note.'
-            id='editLogForm__log_entry'/>
+            <label htmlFor='editLogForm__log_entry'>
+              Entry
+            </label>
+            <input
+              type='text'
+              value={this.state.log_entry}
+              onChange={e => this.handleChange(e)}
+              />
         </div>
 
-        <Button className = 'button' type='submit'>
-          Save
-        </Button>
+        <button type="submit" className="button">Save</button>
 
         <button 
           type="button" 
@@ -69,8 +86,8 @@ goBack = () => {
           onClick={()=> this.goBack()}>
           Cancel
           </button>
-      </form>
-    </div>
+      </div>
+    </form>
     )
   }
 }

@@ -41,12 +41,12 @@ export default class Log extends React.Component {
   }
 
   render() {
-    const { log_name, id, log_entry } = this.props
+    const { log_name, id } = this.props
 
     return (
       <div className='Log'>
         <h2 className='Log__name'>
-          <Link to={`/log/${id}`}>
+          <Link to={`/logs/${id}`}>
             {log_name}
           </Link>
         </h2>
