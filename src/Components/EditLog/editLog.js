@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './editLog.css';
 import LogApiService from '../../Services/log-api-service';
 import config from '../../config';
+import TokenService from '../../Services/token-service';
 
 export default class EditLogForm extends Component {
   static defaultProps = {
@@ -16,8 +17,6 @@ export default class EditLogForm extends Component {
         log_entry: ''
     }
   };
-  this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
 
@@ -41,8 +40,8 @@ componentDidMount(){
 handleChange(event) {
   this.setState({
     log: {
-      log_name: event.target.log_name, 
-      log_entry: event.target.log_entry
+      log_name: document.getElementById("editLogForm__log_name").value, 
+      log_entry: document.getElementById("editLogForm__log_entry").value
     }
     });
 }
@@ -51,34 +50,37 @@ handleChange(event) {
 
 handleSubmit(e) {
   e.preventDefault();
+  
   const logId = this.props.match.params.log_id
-
-    const { log_name, log_entry } = this.state;
-    const log = {
-        log_name: log_name,
-        log_entry: log_entry
-    }
+  const { log_name, log_entry } = this.state.log;
 
     this.setState({error: null})
 
     
-    fetch(`${config.API_ENDPOINT}/logs/${logId}`, {
-        method: 'PATCH',
-        body: JSON.stringify(log),
-        headers: {
-            'content-type': 'application/json'
-        }
+  fetch(`${config.API_ENDPOINT}/logs/${logId}`, {
+      method: 'PATCH',
+      headers: {
+        'content-type': 'application/json'      
+      },
+      body: JSON.stringify({
+        log_name,
+        log_entry
+      })
     })
-    .then(res => {
-        if (!res.ok) {
-            return res.json().then(err => {
-                console.log(`Error is: ${err}`)
-                throw err
-            })
-        }
-        return res.json()
+      .then(res =>
+        (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : res.json()
+      )
+      .then(data => {
+        this.goBack()
+        this.context.addLog(data)
     })
-  
+    .catch(err => {
+        this.setState({ err })
+    })
+
+    alert('Save was successful!');
 }
 
 
@@ -101,7 +103,7 @@ handleSubmit(e) {
               id='editLogForm__log_name'
               name='log_name'
               type='text'
-              value={this.state.log.log_name }       
+              value={this.state.log.log_name}       
               onChange={e => this.handleChange(e)}/>
 
         </div>
@@ -125,7 +127,7 @@ handleSubmit(e) {
           type="button" 
           className="button"
           onClick={()=> this.goBack()}>
-          Cancel
+          Go Back
           </button>
       </div>
     </form>

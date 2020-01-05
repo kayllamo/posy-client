@@ -43,7 +43,7 @@ const LogApiService = {
           : res.json()
       )
   },
-  patchLog(logId, log_name, log_entry) {
+  updateLog(logId, log_name, log_entry) {
     return fetch(`${config.API_ENDPOINT}/logs/${logId}`, {
       method: 'PATCH',
       headers: {
