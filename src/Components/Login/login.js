@@ -88,6 +88,8 @@ render() {
           id='LoginForm__user_password'>
         </Input>
       </div>
+      <p className='demo'>DEMO-EMAIL: testuser@gmail.com</p>
+      <p className='demo'>DEMO-PASSWORD: testing1</p>
       <Button className='button' type='submit'>
         Login 
       </Button>

@@ -88,6 +88,11 @@ label {
     color: red;
     font-size: 16px;  
 }
+
+.demo {
+    background: #0B1C48;
+    font-size: 18px;
+}
 }
 
 /* 
@@ -183,5 +188,9 @@ MEDIA QUERIES  */
         background-color: white;
         color: red;
         font-size: 16px;  
+    }
+    .demo {
+        background: #0B1C48;
+        font-size: 18px;
     }
 }
