@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hero component renders a Hero by default 1`] = `
+<div
+  className="motherHero"
+>
+  <div
+    className="navbar"
+  >
+    <Nav />
+  </div>
+  <div
+    className="hero"
+  >
+    <div
+      className="herotext"
+    >
+      <h1
+        className="heroTitle"
+      >
+        POSY
+      </h1>
+      <h2
+        className="heroTag"
+      >
+        positivity in your pocket
+      </h2>
+    </div>
+    <Link
+      className="herolinks"
+      to="/register"
+    >
+      Register
+    </Link>
+  </div>
+  <div
+    className="about"
+  >
+    <div
+      className="aboutInner1"
+    >
+      <h4
+        className="aboutTag"
+      >
+        Let your thoughts flow
+      </h4>
+    </div>
+    <div
+      className="aboutInner2"
+    >
+      <h4
+        className="aboutTag"
+      >
+        Clear your mind
+      </h4>
+    </div>
+    <div
+      className="aboutInner3"
+    >
+      <h4
+        className="aboutTag"
+      >
+        Create healthy habits
+      </h4>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Hero component renders the Landing given props 1`] = `
+<div
+  className="motherHero"
+>
+  <div
+    className="navbar"
+  >
+    <Nav />
+  </div>
+  <div
+    className="hero"
+  >
+    <div
+      className="herotext"
+    >
+      <h1
+        className="heroTitle"
+      >
+        POSY
+      </h1>
+      <h2
+        className="heroTag"
+      >
+        positivity in your pocket
+      </h2>
+    </div>
+    <Link
+      className="herolinks"
+      to="/register"
+    >
+      Register
+    </Link>
+  </div>
+  <div
+    className="about"
+  >
+    <div
+      className="aboutInner1"
+    >
+      <h4
+        className="aboutTag"
+      >
+        Let your thoughts flow
+      </h4>
+    </div>
+    <div
+      className="aboutInner2"
+    >
+      <h4
+        className="aboutTag"
+      >
+        Clear your mind
+      </h4>
+    </div>
+    <div
+      className="aboutInner3"
+    >
+      <h4
+        className="aboutTag"
+      >
+        Create healthy habits
+      </h4>
+    </div>
+  </div>
+</div>
+`;

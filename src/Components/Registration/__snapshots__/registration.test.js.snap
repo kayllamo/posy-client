@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Registration component renders a form.Registration by default 1`] = `
+<div
+  className="mother"
+>
+  <Nav />
+  <form
+    className="RegistrationForm"
+    onSubmit={[Function]}
+  >
+    <div
+      className="registration"
+    >
+      <h3
+        className="registrationTitle"
+      >
+        REGISTER TO POSY
+      </h3>
+      <div
+        className="user_name"
+      >
+        <label
+          htmlFor="RegistrationForm__user_name"
+        >
+          Full name 
+          <Required />
+        </label>
+        <Input
+          id="RegistrationForm__user_name"
+          name="user_name"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="user_email"
+      >
+        <label
+          htmlFor="RegistrationForm__user_email"
+        >
+          Email Address 
+          <Required />
+        </label>
+        <Input
+          id="RegistrationForm__user_email"
+          name="user_email"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="user_password"
+      >
+        <label
+          htmlFor="RegistrationForm__user_password"
+        >
+          Password 
+          <Required />
+        </label>
+        <Input
+          id="RegistrationForm__user_password"
+          name="user_password"
+          required={true}
+          type="password"
+        />
+      </div>
+      <Button
+        className="button"
+        type="submit"
+      >
+        Register
+      </Button>
+      <Link
+        className="registration_login"
+        to="/login"
+      >
+        Login?
+      </Link>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Registration component renders the SignUpForm given props 1`] = `
+<div
+  className="mother"
+>
+  <Nav />
+  <form
+    className="RegistrationForm"
+    onSubmit={[Function]}
+  >
+    <div
+      className="registration"
+    >
+      <h3
+        className="registrationTitle"
+      >
+        REGISTER TO POSY
+      </h3>
+      <div
+        className="user_name"
+      >
+        <label
+          htmlFor="RegistrationForm__user_name"
+        >
+          Full name 
+          <Required />
+        </label>
+        <Input
+          id="RegistrationForm__user_name"
+          name="user_name"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="user_email"
+      >
+        <label
+          htmlFor="RegistrationForm__user_email"
+        >
+          Email Address 
+          <Required />
+        </label>
+        <Input
+          id="RegistrationForm__user_email"
+          name="user_email"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="user_password"
+      >
+        <label
+          htmlFor="RegistrationForm__user_password"
+        >
+          Password 
+          <Required />
+        </label>
+        <Input
+          id="RegistrationForm__user_password"
+          name="user_password"
+          required={true}
+          type="password"
+        />
+      </div>
+      <Button
+        className="button"
+        type="submit"
+      >
+        Register
+      </Button>
+      <Link
+        className="registration_login"
+        to="/login"
+      >
+        Login?
+      </Link>
+    </div>
+  </form>
+</div>
+`;

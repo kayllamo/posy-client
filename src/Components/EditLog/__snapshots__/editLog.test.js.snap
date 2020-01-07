@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`edLog component renders a form.editLog by default 1`] = `
+<form
+  className="editLogForm"
+  onSubmit={[Function]}
+>
+  <div
+    className="editLog"
+  >
+    <h3>
+      Edit Log
+    </h3>
+    <div
+      className="log_name"
+    >
+      <label
+        htmlFor="editLogForm__log_name"
+      >
+        Title
+      </label>
+      <input
+        id="editLogForm__log_name"
+        name="log_name"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="log_entry"
+    >
+      <label
+        htmlFor="editLogForm__log_entry"
+      >
+        Entry
+      </label>
+      <textarea
+        id="editLogForm__log_entry"
+        name="log_entry"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <button
+      className="button"
+      type="submit"
+    >
+      Save
+    </button>
+    <button
+      className="button"
+      onClick={[Function]}
+      type="button"
+    >
+      Go Back
+    </button>
+  </div>
+</form>
+`;
+
+exports[`edLog component renders the editLog given props 1`] = `
+<form
+  className="editLogForm"
+  onSubmit={[Function]}
+>
+  <div
+    className="editLog"
+  >
+    <h3>
+      Edit Log
+    </h3>
+    <div
+      className="log_name"
+    >
+      <label
+        htmlFor="editLogForm__log_name"
+      >
+        Title
+      </label>
+      <input
+        id="editLogForm__log_name"
+        name="log_name"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="log_entry"
+    >
+      <label
+        htmlFor="editLogForm__log_entry"
+      >
+        Entry
+      </label>
+      <textarea
+        id="editLogForm__log_entry"
+        name="log_entry"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <button
+      className="button"
+      type="submit"
+    >
+      Save
+    </button>
+    <button
+      className="button"
+      onClick={[Function]}
+      type="button"
+    >
+      Go Back
+    </button>
+  </div>
+</form>
+`;

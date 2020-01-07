@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItineraryList component renders the ItineraryList given props 1`] = `
+<section
+  className="LogList"
+>
+  <div
+    className="LogList__content"
+  />
+</section>
+`;

@@ -26,12 +26,10 @@ goBack = () => {
 
 componentDidMount(){
   const logId = this.props.match.params.log_id
-  console.log('Log ID = ', logId)
   LogApiService.getLog(logId)
       .then(log =>{
           this.setState({log: log})
-          console.log('this.state.log.log_name == >', this.state.log.log_name)
-          console.log('this.state.log.log_entry == >', this.state.log.log_entry)
+         
       })
 }
 

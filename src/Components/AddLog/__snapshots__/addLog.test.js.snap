@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`addLog component renders a form.addLog by default 1`] = `
+<form
+  className="AddLogForm"
+  onSubmit={[Function]}
+>
+  <div
+    className="addLog"
+  >
+    <h3
+      className="newLog"
+    >
+      New Log
+    </h3>
+    <div
+      className="log_name"
+    >
+      <label
+        htmlFor="addLogForm__log_name"
+      >
+        Title
+      </label>
+      <input
+        id="addLogForm__log_name"
+        name="log_name"
+        onChange={[Function]}
+      />
+    </div>
+    <div
+      className="log_entry"
+    >
+      <label
+        htmlFor="addLogForm__log_entry"
+      >
+        Entry
+      </label>
+      <textarea
+        id="addLogForm__log_entry"
+        name="log_entry"
+        onChange={[Function]}
+        type="text"
+      />
+    </div>
+    <button
+      className="button"
+      type="submit"
+    >
+      Save
+    </button>
+    <button
+      className="button"
+      onClick={[Function]}
+      type="button"
+    >
+      Cancel
+    </button>
+  </div>
+</form>
+`;
+
+exports[`addLog component renders the addLog given props 1`] = `
+<form
+  className="AddLogForm"
+  onSubmit={[Function]}
+>
+  <div
+    className="addLog"
+  >
+    <h3
+      className="newLog"
+    >
+      New Log
+    </h3>
+    <div
+      className="log_name"
+    >
+      <label
+        htmlFor="addLogForm__log_name"
+      >
+        Title
+      </label>
+      <input
+        id="addLogForm__log_name"
+        name="log_name"
+        onChange={[Function]}
+      />
+    </div>
+    <div
+      className="log_entry"
+    >
+      <label
+        htmlFor="addLogForm__log_entry"
+      >
+        Entry
+      </label>
+      <textarea
+        id="addLogForm__log_entry"
+        name="log_entry"
+        onChange={[Function]}
+        type="text"
+      />
+    </div>
+    <button
+      className="button"
+      type="submit"
+    >
+      Save
+    </button>
+    <button
+      className="button"
+      onClick={[Function]}
+      type="button"
+    >
+      Cancel
+    </button>
+  </div>
+</form>
+`;

@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddActivityItemForm component renders a form.AddActivityItemForm by default 1`] = `
+<div
+  className="Log"
+>
+  <h2
+    className="Log__name"
+  >
+    <Link
+      to="/logs/undefined"
+    />
+  </h2>
+  <button
+    className="Log__delete"
+    onClick={[Function]}
+    type="button"
+  >
+     
+    delete
+  </button>
+</div>
+`;
+
+exports[`AddActivityItemForm component renders the AddActivityItemForm given props 1`] = `
+<div
+  className="Log"
+>
+  <h2
+    className="Log__name"
+  >
+    <Link
+      to="/logs/undefined"
+    />
+  </h2>
+  <button
+    className="Log__delete"
+    onClick={[Function]}
+    type="button"
+  >
+     
+    delete
+  </button>
+</div>
+`;
