@@ -25,8 +25,8 @@ React JS, HTML, CSS, Node, Express, Postgres
 
 ### API ENDPOINTS AND DOCUMENTATION 
 
-https://serene-mountain-83160.herokuapp.com/api/users
-https://serene-mountain-83160.herokuapp.com/api/logs
+https://serene-mountain-83160.herokuapp.com/api/users<br>
+https://serene-mountain-83160.herokuapp.com/api/logs<br>
 https://serene-mountain-83160.herokuapp.com/api/auth
 
 ```conf
