@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './editLog.css';
 import LogApiService from '../../Services/log-api-service';
 import config from '../../config';
-import TokenService from '../../Services/token-service';
 
 export default class EditLogForm extends Component {
   static defaultProps = {

@@ -1,7 +1,6 @@
 import React from 'react';
 import './dashboard.css';
 import { Link } from 'react-router-dom';
-import Nav from '../Nav/nav';
 import PosyContext from '../../PosyContext';
 import LogList from '../Log/LogList';
 
