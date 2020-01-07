@@ -11,18 +11,6 @@ Server-repo: https://github.com/kaylajaograham/posy-server
 ## Tech Stack
 React JS, HTML, CSS, Node, Express, Postgres
 
-## Screenshots
-
-### Landing:
-<img width="362" alt="home" src="https://user-images.githubusercontent.com/35277690/71794667-679d2180-2ff7-11ea-896f-0bd240ffb36e.png">
-
-
-### Dashboard:
-<img width="367" alt="dashboard" src="https://user-images.githubusercontent.com/35277690/71794648-5522e800-2ff7-11ea-8d07-b6817a575226.png">
-
-### New Log:
-<img width="361" alt="newLog" src="https://user-images.githubusercontent.com/35277690/71794661-610eaa00-2ff7-11ea-9be8-b615103ac67c.png">
-
 ### API ENDPOINTS AND DOCUMENTATION 
 
 https://serene-mountain-83160.herokuapp.com/api/users<br>
@@ -56,3 +44,16 @@ https://serene-mountain-83160.herokuapp.com/api/auth
 
 # DELETE existing log #3 --> https://serene-mountain-83160.herokuapp.com/api/logs/3
 ```
+
+## Screenshots
+
+### Landing:
+<img width="362" alt="home" src="https://user-images.githubusercontent.com/35277690/71794667-679d2180-2ff7-11ea-896f-0bd240ffb36e.png">
+
+
+### Dashboard:
+<img width="367" alt="dashboard" src="https://user-images.githubusercontent.com/35277690/71794648-5522e800-2ff7-11ea-8d07-b6817a575226.png">
+
+### New Log:
+<img width="361" alt="newLog" src="https://user-images.githubusercontent.com/35277690/71794661-610eaa00-2ff7-11ea-9be8-b615103ac67c.png">
+
