@@ -42,7 +42,7 @@ https://serene-mountain-83160.herokuapp.com/api/auth
         "log_entry": "Should I start a 30 day challenge?"
     }
 
-# DELETE existing log #3 --> https://serene-mountain-83160.herokuapp.com/api/logs/3
+# DELETE existing log --> https://serene-mountain-83160.herokuapp.com/api/logs/{logId}
 ```
 
 ## Screenshots
