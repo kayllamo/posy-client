@@ -18,7 +18,6 @@ export default class Log extends React.Component {
     window.location.reload(false);
     const logId = this.props.id
 
-
     fetch(`${config.API_ENDPOINT}/logs/${logId}`, {
       method: 'DELETE',
       headers: {
@@ -54,7 +53,7 @@ export default class Log extends React.Component {
         <button 
           className='Log__delete' 
           type='button'
-          onClick={ this.handleClickDelete }>
+          onClick={this.handleClickDelete}>
           {' '}
           delete
         </button>
