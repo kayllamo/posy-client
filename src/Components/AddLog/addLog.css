@@ -28,8 +28,7 @@ h3 {
     text-shadow: 2px 2px gray;
     margin: 40px;
     font-weight: bold;
-    background-color: #0B1C48;
-    
+    background-color: #0B1C48; 
 }
 
 /* buttons  */
@@ -157,6 +156,7 @@ h3 {
     text-align: left;
     width: 100%;
     padding: 5px;
+    color: black;
     border-radius: 10px;
 
 }

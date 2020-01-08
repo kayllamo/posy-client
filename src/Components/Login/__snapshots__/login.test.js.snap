@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm component renders a form.LoginForm by default 1`] = `
+<div
+  className="mother"
+>
+  <Nav />
+  <form
+    className="LoginForm"
+    onSubmit={[Function]}
+  >
+    <div
+      className="login"
+    >
+      <h3
+        className="loginTitle"
+      >
+        LOGIN TO POSY
+      </h3>
+      <div
+        role="alert"
+      />
+      <div
+        className="user_email"
+      >
+        <label
+          htmlFor="LoginForm__user_email"
+        >
+          Email Address
+        </label>
+        <Input
+          id="LoginForm__user_email"
+          name="user_email"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="user_password"
+      >
+        <label
+          htmlFor="LoginForm__user_password"
+        >
+          Password
+        </label>
+        <Input
+          id="LoginForm__user_password"
+          name="user_password"
+          required={true}
+          type="password"
+        />
+      </div>
+      <p
+        className="demo"
+      >
+        DEMO-EMAIL: testuser@gmail.com
+      </p>
+      <p
+        className="demo"
+      >
+        DEMO-PASSWORD: testing1
+      </p>
+      <Button
+        className="button"
+        type="submit"
+      >
+        Login
+      </Button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`LoginForm component renders the LoginForm given props 1`] = `
+<div
+  className="mother"
+>
+  <Nav />
+  <form
+    className="LoginForm"
+    onSubmit={[Function]}
+  >
+    <div
+      className="login"
+    >
+      <h3
+        className="loginTitle"
+      >
+        LOGIN TO POSY
+      </h3>
+      <div
+        role="alert"
+      />
+      <div
+        className="user_email"
+      >
+        <label
+          htmlFor="LoginForm__user_email"
+        >
+          Email Address
+        </label>
+        <Input
+          id="LoginForm__user_email"
+          name="user_email"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="user_password"
+      >
+        <label
+          htmlFor="LoginForm__user_password"
+        >
+          Password
+        </label>
+        <Input
+          id="LoginForm__user_password"
+          name="user_password"
+          required={true}
+          type="password"
+        />
+      </div>
+      <p
+        className="demo"
+      >
+        DEMO-EMAIL: testuser@gmail.com
+      </p>
+      <p
+        className="demo"
+      >
+        DEMO-PASSWORD: testing1
+      </p>
+      <Button
+        className="button"
+        type="submit"
+      >
+        Login
+      </Button>
+    </div>
+  </form>
+</div>
+`;

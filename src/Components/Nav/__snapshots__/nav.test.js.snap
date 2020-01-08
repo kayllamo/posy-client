@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav component renders a Hero by default 1`] = `
+<div
+  className="navbar"
+>
+  <ul>
+    <Link
+      className="navlinks"
+      to="/"
+    >
+      Home
+    </Link>
+    <Link
+      className="navlinks"
+      to="/register"
+    >
+      Register
+    </Link>
+    <Link
+      className="navlinks"
+      to="/login"
+    >
+      Login
+    </Link>
+  </ul>
+</div>
+`;
+
+exports[`Nav component renders the Landing given props 1`] = `
+<div
+  className="navbar"
+>
+  <ul>
+    <Link
+      className="navlinks"
+      to="/"
+    >
+      Home
+    </Link>
+    <Link
+      className="navlinks"
+      to="/register"
+    >
+      Register
+    </Link>
+    <Link
+      className="navlinks"
+      to="/login"
+    >
+      Login
+    </Link>
+  </ul>
+</div>
+`;
