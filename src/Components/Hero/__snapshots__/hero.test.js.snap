@@ -15,16 +15,20 @@ exports[`Hero component renders a Hero by default 1`] = `
     <div
       className="herotext"
     >
-      <h1
-        className="heroTitle"
+      <div
+        className="contrastBox"
       >
-        POSY
-      </h1>
-      <h2
-        className="heroTag"
-      >
-        positivity in your pocket
-      </h2>
+        <h1
+          className="heroTitle"
+        >
+          POSY
+        </h1>
+        <h2
+          className="heroTag"
+        >
+          positivity in your pocket
+        </h2>
+      </div>
     </div>
     <Link
       className="herolinks"
@@ -39,29 +43,41 @@ exports[`Hero component renders a Hero by default 1`] = `
     <div
       className="aboutInner1"
     >
-      <h4
-        className="aboutTag"
+      <div
+        className="contrastBox"
       >
-        Let your thoughts flow
-      </h4>
+        <h4
+          className="aboutTag"
+        >
+          Let your thoughts flow
+        </h4>
+      </div>
     </div>
     <div
       className="aboutInner2"
     >
-      <h4
-        className="aboutTag"
+      <div
+        className="contrastBox"
       >
-        Clear your mind
-      </h4>
+        <h4
+          className="aboutTag"
+        >
+          Clear your mind
+        </h4>
+      </div>
     </div>
     <div
       className="aboutInner3"
     >
-      <h4
-        className="aboutTag"
+      <div
+        className="contrastBox"
       >
-        Create healthy habits
-      </h4>
+        <h4
+          className="aboutTag"
+        >
+          Create healthy habits
+        </h4>
+      </div>
     </div>
   </div>
 </div>
@@ -82,16 +98,20 @@ exports[`Hero component renders the Landing given props 1`] = `
     <div
       className="herotext"
     >
-      <h1
-        className="heroTitle"
+      <div
+        className="contrastBox"
       >
-        POSY
-      </h1>
-      <h2
-        className="heroTag"
-      >
-        positivity in your pocket
-      </h2>
+        <h1
+          className="heroTitle"
+        >
+          POSY
+        </h1>
+        <h2
+          className="heroTag"
+        >
+          positivity in your pocket
+        </h2>
+      </div>
     </div>
     <Link
       className="herolinks"
@@ -106,29 +126,41 @@ exports[`Hero component renders the Landing given props 1`] = `
     <div
       className="aboutInner1"
     >
-      <h4
-        className="aboutTag"
+      <div
+        className="contrastBox"
       >
-        Let your thoughts flow
-      </h4>
+        <h4
+          className="aboutTag"
+        >
+          Let your thoughts flow
+        </h4>
+      </div>
     </div>
     <div
       className="aboutInner2"
     >
-      <h4
-        className="aboutTag"
+      <div
+        className="contrastBox"
       >
-        Clear your mind
-      </h4>
+        <h4
+          className="aboutTag"
+        >
+          Clear your mind
+        </h4>
+      </div>
     </div>
     <div
       className="aboutInner3"
     >
-      <h4
-        className="aboutTag"
+      <div
+        className="contrastBox"
       >
-        Create healthy habits
-      </h4>
+        <h4
+          className="aboutTag"
+        >
+          Create healthy habits
+        </h4>
+      </div>
     </div>
   </div>
 </div>

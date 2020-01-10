@@ -21,7 +21,14 @@
 .herotext {
     background: none;
     padding: 150px 30px;
+    
+}
 
+.contrastBox {
+    background-color: gray;
+    padding: 10px;
+    margin: 0 15% 0 15%;
+    opacity: 70%;
 }
 
 .heroTitle {
@@ -102,7 +109,6 @@ ul {
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
     border-radius: 25px;
     margin-top: 50px;
  
@@ -118,15 +124,15 @@ ul {
 }
 
 .aboutInner2 {
-    background-image: url(https://images.unsplash.com/photo-1531762834015-57aa765c6047?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
+    background-image: url(https://www.theduluthexperience.com/wp-content/uploads/2019/08/dark-forest-moon.jpg);
 }
 
 .aboutInner1 {
-    background-image: url(https://www.nationalgeographic.com/content/dam/news/photos/000/607/60780.jpg);
+    background-image: url(https://ak6.picdn.net/shutterstock/videos/12745076/thumb/1.jpg);
 }
 
 .aboutInner3 {
-    background-image: url(https://wordpress.accuweather.com/wp-content/uploads/2019/02/snow-in-pinehurst-seattle-washington-2-9-19.31.5620AM.png);
+    background-image: url(https://benleney.files.wordpress.com/2013/07/dark_mountains_by_liquidsky64-d4u3ozk.jpg);
 }
 
 
