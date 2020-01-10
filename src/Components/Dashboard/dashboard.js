@@ -21,7 +21,7 @@ export default class Dashboard extends React.Component {
   
     // sends user back to homepage after delete
     handleDeleteLog = logId => {
-      this.props.history.push('/')
+      this.props.history.push('/');
     }
 
     render() {

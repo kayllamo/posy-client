@@ -22,10 +22,10 @@ export default class LogList extends React.Component {
 
   // sends user back to homepage after delete
   handleDeleteLog = logId => {
-    this.props.history.push('/')
+    this.props.history.push('/');
   }
 
-  componentWillMount() { 
+  UNSAFE_componentWillMount() { 
     LogApiService.getLogs()
       .then(res => {
         this.setState(

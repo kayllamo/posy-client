@@ -10,18 +10,19 @@
 
     
     /* Background styles */
-    background-image: url(https://codetheweb.blog/assets/img/posts/full-image-hero/image.jpg);
+    background-image: url(https://images.fineartamerica.com/images-medium-large-5/san-francisco-bay-bridge-at-night-panorama-ken-wolter.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
     margin-bottom: 30px;
+    opacity: 90%;
 }
 
 .herotext {
     background: none;
     padding: 150px 30px;
+
 }
 
 .heroTitle {
@@ -30,7 +31,7 @@
     font-size: 38px;
     color: white;
     padding: 50px 20px;
-    text-shadow: 2px 2px 3px #0B1C48;
+    text-shadow: 3px 3px 3px black;
     background: none;
     margin-top: 0px;
 
@@ -42,7 +43,7 @@
     font-size: 22px;
     color: white;
     padding: 0 20px;
-    text-shadow: 1px 2px 1px #0B1C48;
+    text-shadow: 3px 3px 3px black;
     margin-bottom: 50px;
     background: none;
 
@@ -54,9 +55,9 @@
     text-decoration: none;
     font-weight: bold;
     color: white;
-    border-right: 1px solid #ccc; 
+    border-bottom: 1px solid white; 
     margin: 50px;
-    background-color: peru;
+    background-color: #21633E;
 
 }
 
@@ -73,7 +74,7 @@
     padding: 8px;
     text-decoration: none;
     font-weight: bold;
-    color: peru;
+    color: #21633E;
     border-right: 1px solid #ccc; 
 }
 
@@ -113,7 +114,8 @@ ul {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
     letter-spacing: 6px;
-    text-shadow: 2px 2px 3px #0B1C48;
+    font-size: 26px;
+    text-shadow: 3px 3px 3px black;
 }
 
 .aboutInner2 {
