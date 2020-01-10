@@ -25,9 +25,10 @@
 }
 
 .contrastBox {
-    background-color: gray;
+    background-color: lightgrey;
     padding: 10px;
     margin: 0 15% 0 15%;
+    border-radius: 10px;
 
 
 }
@@ -36,9 +37,9 @@
     font-family: Verdana;
     letter-spacing: 20px;
     font-size: 38px;
-    color: white;
+    color: #21633E;
     padding: 50px 20px;
-    text-shadow: 3px 3px 3px black;
+    text-shadow: 3px 3px 3px white;
     background: none;
     margin-top: 0px;
 
@@ -48,9 +49,9 @@
     font-family: sans-serif;
     letter-spacing: 5px;
     font-size: 22px;
-    color: white;
+    color: #21633E;
     padding: 0 20px;
-    text-shadow: 3px 3px 3px black;
+    text-shadow: 3px 3px 3px white;
     margin-bottom: 50px;
     background: none;
 
@@ -118,10 +119,10 @@ ul {
 .aboutTitle, .aboutTag {
     background: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
+    color: #21633E;
     letter-spacing: 6px;
     font-size: 26px;
-    text-shadow: 3px 3px 3px black;
+    text-shadow: 3px 3px 3px white;
 }
 
 .aboutInner2 {
