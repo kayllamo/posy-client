@@ -4,6 +4,7 @@ import AuthApiService from '../../Services/auth-api-service';
 import { Link } from 'react-router-dom';
 import './registration.css';
 import Nav from '../Nav/nav';
+import TokenService from '../../Services/token-service'
 
 
 export default class RegistrationForm extends Component {
@@ -16,25 +17,39 @@ export default class RegistrationForm extends Component {
   handleSubmit = ev => {
     ev.preventDefault()
     const { user_name, user_email, user_password } = ev.target
-
     this.setState({ error: null })
+    
     AuthApiService.postUser({
       user_email: user_email.value,
       user_password: user_password.value,
       user_name: user_name.value,
     })
-    .then(user => {
-    user_name.value = ''
-    user_email.value = ''
-    user_password.value = ''
-    this.props.onRegistrationSuccess()
+    .then(res => {
+    if(typeof res.id !== 'undefined') {
+      AuthApiService.postLogin({
+        user_email: res.user_email,
+        user_password: user_password.value,
+      })
+      .then(res => {
+          localStorage.setItem('user_id', res.id)
+          TokenService.saveAuthToken(res.authToken)
+      })
+      user_name.value=''
+      user_email.value = ''
+      user_password.value = ''
+      this.props.onRegistrationSuccess()
+    }
+    else {
+      this.setState({error: res.error})
+    }
   })
-    .catch(res => {
-      this.setState({ error: res.error })
-    })
-  }
+  .catch(res => {
+    throw new Error(res.error);
+  })
+}
   
 render() {
+  const { error } = this.state
 
 return (
   <div className='mother'>
@@ -47,7 +62,10 @@ return (
           
     <h3 className='registrationTitle'>REGISTER TO POSY</h3>
 
-    
+    <div role='alert'>
+          {error && <p className='red'>{error}</p>}
+      </div>
+
     <div className='user_name'>
       <label htmlFor='RegistrationForm__user_name'>
         Full name <Required />

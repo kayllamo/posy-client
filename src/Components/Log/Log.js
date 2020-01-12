@@ -2,8 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import './Log.css';
-import PosyContext from '../../PosyContext';
-import config from '../../config';
+import config from '../../config'
 
 
 
@@ -12,10 +11,8 @@ export default class Log extends React.Component {
     onDeleteLog: () => {},
   }
 
-  static contextType = PosyContext;
 
   handleClickDelete = () => {
-    window.location.reload(false);
     const logId = this.props.id
 
     fetch(`${config.API_ENDPOINT}/logs/${logId}`, {
@@ -30,9 +27,6 @@ export default class Log extends React.Component {
       }
     })
     .then(() => {
-      // deletes from context which updates state by removing log
-      this.context.deleteLog(logId)
-      // sends user back to homepage after delete
       this.props.onDeleteLog(logId)
     })
     .catch(err => {

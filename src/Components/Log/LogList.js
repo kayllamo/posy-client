@@ -1,8 +1,6 @@
 import React from 'react'
-
 import './LogList.css';
 import LogApiService from '../../Services/log-api-service';
-import PosyContext from '../../PosyContext'
 import Log from './Log';
 
 export default class LogList extends React.Component {
@@ -12,20 +10,12 @@ export default class LogList extends React.Component {
     logs: []
   }
 
-  static defaultProps = {
-    match: {
-      params: {}
-    }
-  }
-
-  static contextType = PosyContext;
-
-  // sends user back to homepage after delete
   handleDeleteLog = logId => {
-    this.props.history.push('/');
+    const logs = this.state.logs.filter((log)=> log.id !== logId)
+    this.setState({logs})
   }
 
-  UNSAFE_componentWillMount() { 
+componentWillMount() { 
     LogApiService.getLogs()
       .then(res => {
         this.setState(

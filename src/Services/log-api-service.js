@@ -61,7 +61,6 @@ const LogApiService = {
           : res.json()
       )
   }
-
 }
 
 export default LogApiService;
