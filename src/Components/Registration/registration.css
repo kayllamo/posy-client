@@ -57,7 +57,7 @@ input[type=text], input[type=password], input[type=email] {
     border: 1px solid black;
   }
 
-input[type=text]:focus, input[type=password]:focus {
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
     border: 3px solid peru;
 }
 
@@ -151,14 +151,14 @@ MEDIA QUERIES  */
         background-color: teal;
     }
     
-    input[type=text], input[type=password] {
+    input[type=text], input[type=password], input[type=email] {
         background-color: white;
         padding: 5px;
         color: black;
         border: 1px solid black;
       }
     
-    input[type=text]:focus, input[type=password]:focus {
+    input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
         border: 3px solid peru;
     }
     
