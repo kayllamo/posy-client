@@ -15,7 +15,7 @@ export default class LogList extends React.Component {
     this.setState({logs})
   }
 
-componentWillMount() { 
+UNSAFE_componentWillMount() { 
     LogApiService.getLogs()
       .then(res => {
         this.setState(

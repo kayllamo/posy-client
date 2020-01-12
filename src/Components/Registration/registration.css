@@ -50,7 +50,7 @@
     background-color: teal;
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email] {
     background-color: white;
     padding: 5px;
     color: black;

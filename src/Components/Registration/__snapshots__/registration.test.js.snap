@@ -18,6 +18,9 @@ exports[`Registration component renders a form.Registration by default 1`] = `
         REGISTER TO POSY
       </h3>
       <div
+        role="alert"
+      />
+      <div
         className="user_name"
       >
         <label
@@ -99,6 +102,9 @@ exports[`Registration component renders the SignUpForm given props 1`] = `
       >
         REGISTER TO POSY
       </h3>
+      <div
+        role="alert"
+      />
       <div
         className="user_name"
       >

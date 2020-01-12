@@ -40,13 +40,7 @@ exports[`dashboard component renders the ItineraryList given props 1`] = `
         >
           Your logs
         </h4>
-        <LogList
-          match={
-            Object {
-              "params": Object {},
-            }
-          }
-        />
+        <LogList />
       </section>
     </div>
   </div>

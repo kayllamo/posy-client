@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './addLog.css';
-import PosyContext from '../../PosyContext';
 import config from '../../config'; 
 
 export default class AddLogForm extends Component {
@@ -8,8 +7,6 @@ export default class AddLogForm extends Component {
     log_name: "",
     log_entry: ""
 };
-
-static contextType = PosyContext;
 
 goBack = () => {
     this.props.history.goBack();
@@ -116,6 +113,7 @@ handleSubmit(e) {
           <input
             name='log_name'
             id='addLogForm__log_name'
+            required
             onChange={e => this.updateFormEntry(e)}/>
         </div>
   
@@ -128,6 +126,7 @@ handleSubmit(e) {
             name='log_entry'
             type='text'
             id='addLogForm__log_entry'
+            required
             onChange={e => this.updateFormEntry(e)}/>
         </div>
 

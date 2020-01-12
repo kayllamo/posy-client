@@ -83,7 +83,7 @@ return (
       </label>
       <Input
         name='user_email'
-        type='text'
+        type='email'
         required
         id='RegistrationForm__user_email'>
       </Input>
